@@ -188,7 +188,11 @@ header {
     overflow: hidden; 
     height: 200px;
     position: relative;
-    background: #edf2f7; /* Fundo enquanto carrega */
+    /* ALTERAÇÃO: Trocamos o fundo cinza por branco para ficar mais limpo com contain */
+    background: #ffffff; 
+    display: flex; /* Centralizar imagem */
+    justify-content: center; /* Centralizar imagem */
+    align-items: center; /* Centralizar imagem */
 }
 
 .card-img {
@@ -343,4 +347,23 @@ header {
     .filters-overlay.open { display: block; }
     .menu-header { display: flex; justify-content: space-between; width: 100%; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 15px; align-items: center; }
     .menu-header h3 { font-size: 1.2rem; }
+
+    .container {
+        /* Define exatamente duas colunas de tamanhos iguais */
+        grid-template-columns: 1fr 1fr; 
+        /* Diminui o espaçamento para caber melhor */
+        gap: 15px; 
+        /* Ajusta o padding lateral */
+        padding: 10px 15px 40px; 
+    }
+
+    /* Opcional: Diminuir o tamanho da imagem no mobile para ganhar espaço */
+    .img-container {
+        height: 150px; /* Reduz de 200px para 150px no celular */
+    }
+
+    /* Opcional: Diminuir o tamanho da fonte do título no mobile */
+    .card-title {
+        font-size: 0.95rem;
+    }
 }
